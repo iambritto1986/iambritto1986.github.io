@@ -1,0 +1,127 @@
+[
+  {
+    "id": "claimcoda",
+    "index": "01",
+    "title": "ClaimCoda",
+    "subtitle": "Healthcare Denial Intelligence",
+    "visibility": "public",
+    "badge": "Public Repo",
+    "domain": "Healthcare · Consumer AI",
+    "accent": "#10b981",
+    "accentRgb": "16, 185, 129",
+    "categories": ["public", "ai"],
+    "summary": "Consumer-first health insurance denial intelligence and appeal workspace. Transforms confusing EOBs and Adverse Benefit Determinations into grounded 3-part administrative appeal packets and Level 2 IRO dossiers.",
+    "highlights": [
+      "Real PDF denial ingestion via pdfjs-dist with strict page-level provenance",
+      "Dual-pane source viewer & ERISA § 503 / ACA § 2719 statutory deadline registry",
+      "Real-time Voice Advocate powered by Gemini Multimodal Live API (Zephyr)"
+    ],
+    "stack": ["React 19", "TypeScript", "Gemini Live API", "Firebase", "pdfjs-dist", "jsPDF"],
+    "url": "https://github.com/iambritto1986/Claims_Coda",
+    "cta": "Explore Repository"
+  },
+  {
+    "id": "fair-and-square",
+    "index": "02",
+    "title": "Fair & Square",
+    "subtitle": "formerly Precision Match · fairandsquare.ai",
+    "visibility": "private",
+    "badge": "Private · Flagship",
+    "domain": "Career AI · Web & Electron",
+    "accent": "#06b6d4",
+    "accentRgb": "6, 182, 212",
+    "categories": ["ai", "desktop"],
+    "summary": "AI resume tailoring and live voice interview preparation platform under Singularity Insight. Tailors resumes to job descriptions with individual accept/reject control and watermark-free ATS-safe PDF/DOCX exports.",
+    "highlights": [
+      "Line-by-line bullet review—AI never silently rewrites a user's resume",
+      "Live voice mock interviews grounded in resume history with AI coach Aadhya",
+      "8-theme dashboard, Application Tracker, Stripe billing & Electron packaging"
+    ],
+    "stack": ["React 19", "Express", "Firebase", "Gemini Live", "Stripe", "Electron"],
+    "url": null,
+    "cta": "Private Codebase · Demo on Request"
+  },
+  {
+    "id": "bubba",
+    "index": "03",
+    "title": "Bubba",
+    "subtitle": "Animasio · animasio.com",
+    "visibility": "private",
+    "badge": "Private · Desktop 3D",
+    "domain": "Desktop Companion · 3D & Voice",
+    "accent": "#c084fc",
+    "accentRgb": "192, 132, 252",
+    "categories": ["ai", "desktop"],
+    "summary": "A living Windows desktop companion (Oliver, Aria, and Bubba)—not a static timer widget. Walks across the screen, sits on the taskbar edge during focus sessions, and interacts via voice and break quizzes.",
+    "highlights": [
+      "Frameless always-on-top Tauri 2 + Rust window with transparent VP9 video & 3D GLB states",
+      "On-device Vosk wake-word detection with cost-guarded ElevenLabs voice sessions",
+      "Gemini break quizzes & Render PostgreSQL persistence with Clerk auth"
+    ],
+    "stack": ["Tauri 2", "Rust", "React 19", "Three.js", "ElevenLabs", "PostgreSQL"],
+    "url": null,
+    "cta": "Private Codebase · Showcase Ready"
+  },
+  {
+    "id": "apex-os",
+    "index": "04",
+    "title": "Apex OS",
+    "subtitle": "Organizational Intelligence Platform",
+    "visibility": "private",
+    "badge": "Private · 3D Graph",
+    "domain": "Enterprise SaaS · Operating Model",
+    "accent": "#3b82f6",
+    "accentRgb": "59, 130, 246",
+    "categories": ["ai", "enterprise", "desktop"],
+    "summary": "AI-native enterprise SaaS platform to model organizational structure, govern reusable SOPs, map clickable process nodes, compose playbooks, and explore company relationships in 3D.",
+    "highlights": [
+      "Interactive 3D Neural Knowledge Graph (Three.js / react-force-graph-3d)",
+      "Grounded tenant-isolated AI with human-approved controlled agentic actions",
+      "Multi-tenant Clerk SSO/SAML, Prisma ORM v6 & PostgreSQL"
+    ],
+    "stack": ["React 19", "Three.js", "Prisma", "PostgreSQL", "Clerk SSO", "Gemini"],
+    "url": null,
+    "cta": "Private Codebase · Walkthrough on Request"
+  },
+  {
+    "id": "talonsync",
+    "index": "05",
+    "title": "TalonSync / Banana OS",
+    "subtitle": "Product Planner & Backlog Prioritization",
+    "visibility": "private",
+    "badge": "Private · Real-Time",
+    "domain": "Product Management · Workshops",
+    "accent": "#f59e0b",
+    "accentRgb": "245, 158, 11",
+    "categories": ["enterprise"],
+    "summary": "Collaborative backlog prioritization working board converting Excel/CSV spreadsheets into real-time facilitated sessions with consensus voting and executive exports.",
+    "highlights": [
+      "Priority (P0–P3), Disposition, Value vs. Effort 2×2 matrix & blind Delphi planning poker",
+      "Zero-dependency gzip URL sharing & live Socket.IO Knock-to-Join room entry",
+      "5-way export suite including an 8-sheet Excel workbook, CSV, HTML & Markdown"
+    ],
+    "stack": ["React 19", "Socket.IO", "Prisma", "SheetJS", "Clerk", "Vitest"],
+    "url": null,
+    "cta": "Private Codebase · Demo on Request"
+  },
+  {
+    "id": "performance-pro",
+    "index": "06",
+    "title": "PerformancePro",
+    "subtitle": "Organizational Performance Management",
+    "visibility": "public",
+    "badge": "Public Repo",
+    "domain": "People Ops · Analytics",
+    "accent": "#38bdf8",
+    "accentRgb": "56, 189, 248",
+    "categories": ["public", "enterprise"],
+    "summary": "Role-based organizational performance platform supporting team goals, continuous feedback, evaluation workflows, calibration lists, and executive analytics.",
+    "highlights": [
+      "Role-aware dashboards for Employees, Managers, and Administrators",
+      "Interactive analytics (Recharts), Microsoft MSAL auth & PDF/Excel reporting"
+    ],
+    "stack": ["React 18", "TypeScript", "Recharts", "MSAL", "Zod"],
+    "url": "https://github.com/iambritto1986/sb1-kvshuu",
+    "cta": "Explore Repository"
+  }
+]

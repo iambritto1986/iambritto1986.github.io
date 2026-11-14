@@ -4,271 +4,505 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Britto Thomas — Product &amp; AI Systems Portfolio</title>
-  <meta name="description" content="Portfolio of Britto Thomas: AI-native products built from business case, PRD, and architecture to full-stack web and desktop software." />
+  <meta name="description" content="Interactive 3D portfolio of Britto Thomas: AI-native products built from business case, PRD, and architecture to full-stack web and desktop software." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050814'/%3E%3Cpath d='M16 5L27 16L16 27L5 16Z' fill='%2322d3ee'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
 </head>
 <body>
+  <div class="ambient-mesh" aria-hidden="true"></div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="container nav-row">
-      <a class="brand" href="#top">Britto Thomas</a>
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Britto Thomas</span>
+      </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#projects">Projects</a>
-        <a href="#stack">Capabilities</a>
-        <a href="#about">Background</a>
-        <a class="btn-outline" href="https://www.linkedin.com/in/britto-thomas-apr1986/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn-outline" href="https://github.com/iambritto1986" target="_blank" rel="noopener">GitHub</a>
+        <a href="#projects">Systems</a>
+        <a href="#capabilities">Craft</a>
+        <a href="#about">About</a>
+        <a class="nav-pill" href="https://www.linkedin.com/in/britto-thomas-apr1986/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="nav-pill" href="https://github.com/iambritto1986" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Chicago · McKinsey · Uber Tech · AVMA · Singularity Insight</p>
-        <h1>Building AI-native products from business case to shipped software.</h1>
-        <p class="lead">
-          I'm Britto Thomas. Across healthcare appeals, career intelligence, desktop companions, enterprise operating models, and collaborative product planning, I design and build full-stack web and desktop applications end to end.
-        </p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="#projects">Explore What I'm Building</a>
-          <a class="btn-secondary" href="https://www.linkedin.com/in/britto-thomas-apr1986/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-          <a class="btn-secondary" href="https://github.com/iambritto1986" target="_blank" rel="noopener">GitHub Profile</a>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow-pill">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Chicago · McKinsey · Uber Tech · AVMA · Singularity Insight</span>
+          </div>
+          <h1>
+            Building <span class="gradient-words">AI-native products</span> from strategy to shipped code.
+          </h1>
+          <p class="lead">
+            I design and engineer full-stack web and desktop systems across healthcare appeals, career intelligence, living 3D desktop companions, enterprise operating graphs, and real-time product prioritization.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore 6 Products &rarr;</a>
+            <a class="btn btn-glass" href="https://www.linkedin.com/in/britto-thomas-apr1986/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+            <a class="btn btn-glass" href="https://github.com/iambritto1986" target="_blank" rel="noopener">GitHub Profile</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-box">
+              <span class="metric-val">6</span>
+              <span class="metric-label">Products Built</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-val">Web + 3D</span>
+              <span class="metric-label">React, Tauri &amp; Electron</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-val">Voice AI</span>
+              <span class="metric-label">Gemini Live &amp; ElevenLabs</span>
+            </div>
+          </div>
         </div>
-        <div class="stats-row" aria-label="Portfolio summary">
-          <div class="stat-pill"><strong>6</strong> Shipped &amp; Active Products</div>
-          <div class="stat-pill"><strong>Web + Desktop</strong> React, Tauri 2 &amp; Electron</div>
-          <div class="stat-pill"><strong>Multimodal AI</strong> Gemini Live, 3D &amp; Voice</div>
+
+        <div class="stage-card" id="stageCard">
+          <div class="stage-hud-top">
+            <span class="hud-chip">3D Product Constellation</span>
+            <span class="hud-chip">Drag to Orbit</span>
+          </div>
+          <div class="stage-canvas-wrap" id="stageWrap" aria-label="Interactive 3D constellation of 6 products. Drag to rotate.">
+            <canvas class="stage-canvas" id="heroCanvas"></canvas>
+            <div class="stage-fallback">
+              <div>
+                <strong>Singularity Insight Systems</strong>
+                <p>ClaimCoda · Fair &amp; Square · Bubba · Apex OS · TalonSync · PerformancePro</p>
+              </div>
+            </div>
+          </div>
+          <div class="stage-legend" id="stageLegend" aria-label="Select a product node">
+            <button type="button" class="legend-pill" data-target="claimcoda" style="--pill-color:#10b981"><span class="legend-dot"></span>ClaimCoda</button>
+            <button type="button" class="legend-pill" data-target="fair-and-square" style="--pill-color:#06b6d4"><span class="legend-dot"></span>Fair &amp; Square</button>
+            <button type="button" class="legend-pill" data-target="bubba" style="--pill-color:#c084fc"><span class="legend-dot"></span>Bubba</button>
+            <button type="button" class="legend-pill" data-target="apex-os" style="--pill-color:#3b82f6"><span class="legend-dot"></span>Apex OS</button>
+            <button type="button" class="legend-pill" data-target="talonsync" style="--pill-color:#f59e0b"><span class="legend-dot"></span>TalonSync</button>
+            <button type="button" class="legend-pill" data-target="performance-pro" style="--pill-color:#38bdf8"><span class="legend-dot"></span>PerformancePro</button>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="projects" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>What I'm Building</h2>
-          <p>Public repositories are open for inspection on GitHub; private builds include full architecture summaries and are available for live walkthroughs on request.</p>
+        <div class="section-header-row">
+          <div>
+            <p class="section-kicker">01 / Portfolio Matrix</p>
+            <h2 class="section-title">What I'm Building</h2>
+            <p class="section-sub">Public repositories are open on GitHub; private builds include architecture highlights and live walkthroughs on request.</p>
+          </div>
+          <div class="filter-bar" role="tablist" aria-label="Filter projects by category">
+            <button class="filter-btn is-active" data-filter="all" type="button">All (6)</button>
+            <button class="filter-btn" data-filter="public" type="button">Public Repos</button>
+            <button class="filter-btn" data-filter="ai" type="button">AI &amp; Voice</button>
+            <button class="filter-btn" data-filter="desktop" type="button">Desktop &amp; 3D</button>
+            <button class="filter-btn" data-filter="enterprise" type="button">Enterprise &amp; PM</button>
+          </div>
         </div>
 
-        <div class="grid two-col">
-          <article class="card featured-card">
-            <div class="card-top">
-              <span class="badge badge-live">Public Repo</span>
-              <span class="meta">Healthcare · Consumer AI</span>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Populated from projects.json (with static fallback below if JS disabled) -->
+          <article class="project-card" id="card-claimcoda" style="--card-accent:#10b981;--card-rgb:16,185,129;" data-cats="public ai">
+            <div class="card-meta-row">
+              <span class="card-index">01 / 06</span>
+              <span class="card-badge">Public Repo</span>
             </div>
-            <h3>ClaimCoda</h3>
-            <p class="card-desc">
-              Consumer-first health insurance denial intelligence and appeal workspace. Transforms EOBs and Adverse Benefit Determination letters into structured, evidence-backed 3-part administrative appeal packets and Level 2 IRO dossiers.
-            </p>
-            <ul class="highlights">
-              <li>Real PDF denial ingestion (<code>pdfjs-dist</code>) with strict source-page provenance</li>
-              <li>Dual-pane source viewer &amp; statutory deadline rules (ERISA § 503 / ACA § 2719)</li>
-              <li>Real-time Voice Advocate powered by Gemini Multimodal Live API (<code>Zephyr</code>)</li>
-              <li>Includes Business Case, PRD, TRD, and multi-page PDF packet export</li>
-            </ul>
-            <div class="tags">
-              <span>React 19</span>
-              <span>TypeScript</span>
-              <span>Gemini Live API</span>
-              <span>Firebase</span>
-              <span>pdfjs-dist</span>
-              <span>jsPDF</span>
-            </div>
-            <div class="card-links">
-              <a href="https://github.com/iambritto1986/Claims_Coda" target="_blank" rel="noopener">View Repository &rarr;</a>
+            <h3 class="card-title">ClaimCoda</h3>
+            <p class="card-subtitle">Healthcare Denial Intelligence</p>
+            <p class="card-summary">Consumer-first health insurance denial intelligence and appeal workspace transforming EOBs into grounded 3-part appeal packets and Level 2 IRO dossiers.</p>
+            <div class="card-footer">
+              <a class="card-link" href="https://github.com/iambritto1986/Claims_Coda" target="_blank" rel="noopener">Explore Repository &rarr;</a>
             </div>
           </article>
+        </div>
 
-          <article class="card featured-card">
-            <div class="card-top">
-              <span class="badge badge-private">Private Repo · Flagship</span>
-              <span class="meta">Career AI · Web &amp; Electron</span>
-            </div>
-            <h3>Fair &amp; Square <span class="subtitle">(formerly Precision Match)</span></h3>
-            <p class="card-desc">
-              AI resume tailoring and live voice interview preparation platform (<code>fairandsquare.ai</code>). Tailors resumes to job descriptions with line-by-line user accept/reject control and watermark-free ATS-safe PDF/DOCX exports.
-            </p>
-            <ul class="highlights">
-              <li>Individual bullet-point review—AI never silently alters a user's resume</li>
-              <li>Live voice mock interviews grounded in the user's resume with AI coach <strong>Aadhya</strong></li>
-              <li>Multi-theme dashboard (Dark/Light × 4 accents), Application Tracker &amp; Stripe billing</li>
-              <li>Built under Singularity Insight with Web + Electron desktop packaging</li>
-            </ul>
-            <div class="tags">
-              <span>React 19</span>
-              <span>Express</span>
-              <span>Firebase</span>
-              <span>Gemini Live</span>
-              <span>Stripe</span>
-              <span>Electron</span>
-            </div>
-            <div class="card-links">
-              <span class="muted-note">Private codebase · Live demo on request</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-top">
-              <span class="badge badge-private">Private Repo</span>
-              <span class="meta">Desktop Companion · animasio.com</span>
-            </div>
-            <h3>Bubba <span class="subtitle">(Animasio)</span></h3>
-            <p class="card-desc">
-              A living Windows desktop companion (*Oliver*, *Aria*, and *Bubba*)—not a static timer widget. Walks across the screen, sits on the taskbar edge during focus sessions, and interacts via voice and break quizzes.
-            </p>
-            <ul class="highlights">
-              <li>Frameless, always-on-top Tauri 2 + Rust window with transparent VP9 video &amp; 3D GLB states</li>
-              <li>On-device wake-word detection (<code>Vosk</code>) with strict cost-guarded ElevenLabs voice sessions</li>
-              <li>Gemini-powered break quizzes and Postgres session persistence</li>
-            </ul>
-            <div class="tags">
-              <span>Tauri 2</span>
-              <span>Rust</span>
-              <span>React 19</span>
-              <span>Three.js</span>
-              <span>ElevenLabs</span>
-              <span>PostgreSQL</span>
-            </div>
-            <div class="card-links">
-              <span class="muted-note">Private codebase · Showcase site in repo</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-top">
-              <span class="badge badge-private">Private Repo</span>
-              <span class="meta">Enterprise SaaS · 3D Graph</span>
-            </div>
-            <h3>Apex OS <span class="subtitle">(Organizational Intelligence)</span></h3>
-            <p class="card-desc">
-              AI-native enterprise operating intelligence platform to model organizational structure, govern reusable SOPs, map clickable processes, compose playbooks, and track KPIs, costs, and risks.
-            </p>
-            <ul class="highlights">
-              <li>Interactive 3D Neural Knowledge Graph (<code>Three.js</code> / <code>react-force-graph-3d</code>) driven by real relationships</li>
-              <li>Grounded tenant-isolated AI with human-in-the-loop approval for controlled actions</li>
-              <li>Multi-tenant Clerk SSO/SAML, Prisma ORM v6 &amp; PostgreSQL</li>
-            </ul>
-            <div class="tags">
-              <span>React 19</span>
-              <span>Three.js</span>
-              <span>Prisma</span>
-              <span>PostgreSQL</span>
-              <span>Clerk SSO</span>
-              <span>Gemini</span>
-            </div>
-            <div class="card-links">
-              <span class="muted-note">Private codebase · Walkthrough on request</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-top">
-              <span class="badge badge-private">Private Repo</span>
-              <span class="meta">Product Management · Real-Time</span>
-            </div>
-            <h3>TalonSync / Banana OS <span class="subtitle">(Product Planner)</span></h3>
-            <p class="card-desc">
-              Collaborative requirement and backlog prioritization board turning Excel/CSV spreadsheets into structured, real-time facilitated working sessions for Product Managers and teams.
-            </p>
-            <ul class="highlights">
-              <li>Priority (<code>P0–P3</code>), Disposition, Value vs. Effort 2×2 matrix &amp; blind Delphi planning poker</li>
-              <li>Zero-dependency gzip URL snapshot sharing &amp; live <code>Socket.IO</code> Knock-to-Join room entry</li>
-              <li>5-way export suite including an 8-sheet Excel workbook, CSV, HTML, and Markdown</li>
-            </ul>
-            <div class="tags">
-              <span>React 19</span>
-              <span>Socket.IO</span>
-              <span>Prisma</span>
-              <span>SheetJS</span>
-              <span>Clerk</span>
-              <span>Vitest</span>
-            </div>
-            <div class="card-links">
-              <span class="muted-note">Private codebase · Demo on request</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-top">
-              <span class="badge badge-live">Public Repo</span>
-              <span class="meta">People Ops · Analytics</span>
-            </div>
-            <h3>PerformancePro</h3>
-            <p class="card-desc">
-              Organizational performance management web app supporting team goals, continuous feedback, evaluation forms, calibration workflows, and role-based analytics dashboards.
-            </p>
-            <ul class="highlights">
-              <li>Role-aware navigation for Employees, Managers, and Admins</li>
-              <li>Interactive analytics charts (<code>Recharts</code>), MSAL auth &amp; PDF/Excel reporting</li>
-            </ul>
-            <div class="tags">
-              <span>React 18</span>
-              <span>TypeScript</span>
-              <span>Recharts</span>
-              <span>MSAL</span>
-              <span>Zod</span>
-            </div>
-            <div class="card-links">
-              <a href="https://github.com/iambritto1986/sb1-kvshuu" target="_blank" rel="noopener">View Repository &rarr;</a>
-            </div>
-          </article>
+        <div class="feed-panel reveal" aria-live="polite">
+          <div class="feed-head">
+            <span class="feed-title">Live Public GitHub Feed · @iambritto1986</span>
+            <a class="card-link" href="https://github.com/iambritto1986?tab=repositories" target="_blank" rel="noopener">All Public Repositories &rarr;</a>
+          </div>
+          <div class="feed-items" id="githubFeed">
+            <span class="card-private-note">Syncing public repositories from GitHub...</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="stack" class="section section-alt">
+    <section id="capabilities" class="section section-band">
       <div class="container">
-        <div class="section-head">
-          <h2>How I Build</h2>
-          <p>Every product combines structured product rigor with hands-on engineering.</p>
+        <div class="section-header-row">
+          <div>
+            <p class="section-kicker">02 / Engineering &amp; Product Rigor</p>
+            <h2 class="section-title">How Every System Is Built</h2>
+          </div>
         </div>
-        <div class="grid three-col">
-          <div class="card">
-            <h3>Product &amp; Governance</h3>
-            <p class="card-desc">
-              Business cases, PRDs, TRDs, statutory &amp; privacy boundaries, human-in-the-loop AI guardrails, and clear user economics.
-            </p>
+        <div class="pillars-grid">
+          <div class="pillar-card reveal">
+            <span class="pillar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </span>
+            <h3>Strategy to Specification</h3>
+            <p>Every product begins with a sharp business case, PRD, TRD, explicit non-goals, pricing unit economics, and regulatory or trust boundaries.</p>
           </div>
-          <div class="card">
+          <div class="pillar-card reveal">
+            <span class="pillar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+            </span>
             <h3>Multimodal &amp; Voice AI</h3>
-            <p class="card-desc">
-              Google Gemini text &amp; Live WebSocket voice agents, ElevenLabs TTS, local wake-word detection, and grounded document provenance.
-            </p>
+            <p>Gemini Multimodal Live WebSockets, ElevenLabs voice pipelines, local Vosk wake-word detection, and strict provenance so AI never hallucinates facts.</p>
           </div>
-          <div class="card">
-            <h3>Full-Stack &amp; Desktop</h3>
-            <p class="card-desc">
-              React 19, TypeScript, Tailwind CSS, Three.js, Tauri 2 (Rust), Electron, Node/Express, Prisma, PostgreSQL, Firebase, and Clerk.
-            </p>
+          <div class="pillar-card reveal">
+            <span class="pillar-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </span>
+            <h3>Full-Stack, 3D &amp; Desktop</h3>
+            <p>React 19, TypeScript, Three.js, Tauri 2 (Rust), Electron, Express, PostgreSQL, Prisma ORM, Firebase, Clerk SSO, Stripe, and Socket.IO.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="about" class="section">
-      <div class="container about-box">
-        <div>
-          <h2>Background</h2>
-          <p>
-            Based in <strong>Chicago</strong>, with experience across <strong>McKinsey</strong>, <strong>Uber Tech</strong>, and <strong>AVMA</strong>. I focus on turning messy, high-friction workflows—insurance denials, job-search tailoring, backlog prioritization, organizational knowledge, and personal focus—into clean, trustworthy AI software.
+      <div class="container about-grid">
+        <div class="reveal">
+          <p class="section-kicker">03 / Background</p>
+          <h2 class="section-title">Product Builder in Chicago</h2>
+          <p class="lead">
+            With experience across <strong>McKinsey</strong>, <strong>Uber Tech</strong>, and <strong>AVMA</strong>, I build under <strong>Singularity Insight</strong> to turn high-friction workflows—insurance denials, resume tailoring, organizational governance, backlog alignment, and focus habits—into software people actually want to use.
           </p>
         </div>
-        <div class="contact-card">
-          <h3>Connect &amp; Walkthroughs</h3>
-          <p>Interested in a demo of Fair &amp; Square, Bubba, Apex OS, or TalonSync?</p>
-          <ul>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/britto-thomas-apr1986/" target="_blank" rel="noopener">britto-thomas-apr1986</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/iambritto1986" target="_blank" rel="noopener">github.com/iambritto1986</a></li>
-            <li><strong>Location:</strong> Chicago, IL</li>
+        <aside class="contact-box reveal">
+          <h3>Request a Walkthrough</h3>
+          <p class="card-summary">Want to see Fair &amp; Square, Bubba, Apex OS, or TalonSync in action?</p>
+          <ul class="contact-list">
+            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/britto-thomas-apr1986/" target="_blank" rel="noopener">britto-thomas-apr1986</a></li>
+            <li><span>GitHub</span><a href="https://github.com/iambritto1986" target="_blank" rel="noopener">@iambritto1986</a></li>
+            <li><span>Location</span><span>Chicago, IL</span></li>
           </ul>
-        </div>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Britto Thomas · Singularity Insight · Hosted on GitHub Pages</p>
+    <div class="container footer-row">
+      <span>&copy; 2026 Britto Thomas · Singularity Insight</span>
+      <span>Auto-synced portfolio · Hosted on GitHub Pages</span>
     </div>
   </footer>
+
+  <script type="module">
+    import * as THREE from 'three';
+
+    // 1. Render project cards from projects.json + 3D perspective card tilt
+    const grid = document.getElementById('projectsGrid');
+    const finePointer = matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)').matches;
+
+    function attachCardTilt(card) {
+      if (!finePointer) return;
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        card.style.setProperty('--mx', `${(x * 100).toFixed(1)}%`);
+        card.style.setProperty('--my', `${(y * 100).toFixed(1)}%`);
+        const rx = (0.5 - y) * 7;
+        const ry = (x - 0.5) * 9;
+        card.style.transform = `rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-4px)`;
+      });
+      card.addEventListener('pointerleave', () => {
+        card.style.transform = '';
+      });
+    }
+
+    async function loadProjects() {
+      try {
+        const res = await fetch('./projects.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const projects = await res.json();
+        grid.innerHTML = '';
+        for (const p of projects) {
+          const el = document.createElement('article');
+          el.className = 'project-card';
+          el.id = `card-${p.id}`;
+          el.style.setProperty('--card-accent', p.accent);
+          el.style.setProperty('--card-rgb', p.accentRgb);
+          el.dataset.cats = p.categories.join(' ');
+          el.innerHTML = `
+            <div class="card-meta-row">
+              <span class="card-index">${p.index} / ${String(projects.length).padStart(2, '0')}</span>
+              <span class="card-badge">${p.badge}</span>
+            </div>
+            <h3 class="card-title">${p.title}</h3>
+            <p class="card-subtitle">${p.subtitle}</p>
+            <p class="card-summary">${p.summary}</p>
+            <ul class="card-highlights">${p.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+            <div class="card-stack">${p.stack.map(s => `<span class="stack-chip">${s}</span>`).join('')}</div>
+            <div class="card-footer">
+              ${p.url
+                ? `<a class="card-link" href="${p.url}" target="_blank" rel="noopener">${p.cta} &rarr;</a>`
+                : `<span class="card-private-note">${p.cta}</span>`}
+              <span class="card-domain">${p.domain}</span>
+            </div>`;
+          grid.appendChild(el);
+          attachCardTilt(el);
+        }
+      } catch {
+        grid.querySelectorAll('.project-card').forEach(attachCardTilt);
+      }
+    }
+
+    // 2. Category filters
+    document.querySelectorAll('.filter-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        const filter = btn.dataset.filter;
+        grid.querySelectorAll('.project-card').forEach((card) => {
+          const cats = (card.dataset.cats || '').split(/\s+/);
+          card.classList.toggle('is-hidden', filter !== 'all' && !cats.includes(filter));
+        });
+      });
+    });
+
+    // 3. Live public GitHub activity strip
+    async function loadGitHubFeed() {
+      const feed = document.getElementById('githubFeed');
+      try {
+        const res = await fetch('https://api.github.com/users/iambritto1986/repos?sort=updated&per_page=8');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const repos = (await res.json()).filter(r => !r.fork && r.name !== 'iambritto1986' && r.name !== 'iambritto1986.github.io');
+        if (!repos.length) throw new Error('empty');
+        feed.innerHTML = repos.map(r => `
+          <a class="repo-pill" href="${r.html_url}" target="_blank" rel="noopener">
+            <span>${r.name}</span>
+            ${r.language ? `<span class="repo-lang">${r.language}</span>` : ''}
+          </a>`).join('');
+      } catch {
+        feed.innerHTML = `
+          <a class="repo-pill" href="https://github.com/iambritto1986/Claims_Coda" target="_blank" rel="noopener"><span>Claims_Coda</span><span class="repo-lang">TypeScript</span></a>
+          <a class="repo-pill" href="https://github.com/iambritto1986/sb1-kvshuu" target="_blank" rel="noopener"><span>sb1-kvshuu</span><span class="repo-lang">TypeScript</span></a>
+          <a class="repo-pill" href="https://github.com/iambritto1986/insights" target="_blank" rel="noopener"><span>insights</span></a>
+          <a class="repo-pill" href="https://github.com/iambritto1986/Agentic_Crew" target="_blank" rel="noopener"><span>Agentic_Crew</span></a>`;
+      }
+    }
+
+    // 4. Scroll reveal observer
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // 5. Interactive Three.js 3D Constellation
+    function init3DStage() {
+      const card = document.getElementById('stageCard');
+      const wrap = document.getElementById('stageWrap');
+      const canvas = document.getElementById('heroCanvas');
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let renderer;
+      try {
+        renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+      } catch {
+        card.classList.add('is-fallback');
+        return;
+      }
+      if (!renderer.getContext()) {
+        card.classList.add('is-fallback');
+        return;
+      }
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+      camera.position.set(0, 0.25, 6.2);
+
+      const rig = new THREE.Group();
+      scene.add(rig);
+
+      // Lights
+      scene.add(new THREE.AmbientLight(0xdbeafe, 0.7));
+      const key = new THREE.DirectionalLight(0x67e8f9, 2.2);
+      key.position.set(4, 5, 5);
+      scene.add(key);
+      const rim = new THREE.DirectionalLight(0xc084fc, 1.8);
+      rim.position.set(-5, -3, 3);
+      scene.add(rim);
+
+      // Central crystal icosahedron + wireframe halo
+      const coreGeo = new THREE.IcosahedronGeometry(1.12, 1);
+      const coreMat = new THREE.MeshPhysicalMaterial({
+        color: 0x0f172a,
+        emissive: 0x164e63,
+        emissiveIntensity: 0.55,
+        roughness: 0.18,
+        metalness: 0.72,
+        clearcoat: 1.0,
+        flatShading: true
+      });
+      const coreMesh = new THREE.Mesh(coreGeo, coreMat);
+      rig.add(coreMesh);
+
+      const wireMesh = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(1.24, 1),
+        new THREE.MeshBasicMaterial({ color: 0x22d3ee, wireframe: true, transparent: true, opacity: 0.35 })
+      );
+      rig.add(wireMesh);
+
+      // 3 orbital rings
+      const ringSpecs = [
+        { r: 2.05, tiltX: 1.05, tiltY: 0.3, color: 0x22d3ee, opacity: 0.35 },
+        { r: 2.35, tiltX: -0.75, tiltY: 0.65, color: 0xc084fc, opacity: 0.28 },
+        { r: 2.6, tiltX: 0.4, tiltY: -0.9, color: 0x10b981, opacity: 0.22 }
+      ];
+      const rings = ringSpecs.map((s) => {
+        const mesh = new THREE.Mesh(
+          new THREE.TorusGeometry(s.r, 0.014, 12, 96),
+          new THREE.MeshBasicMaterial({ color: s.color, transparent: true, opacity: s.opacity })
+        );
+        mesh.rotation.set(s.tiltX, s.tiltY, 0);
+        rig.add(mesh);
+        return mesh;
+      });
+
+      // 6 satellite product nodes + filament lines to core
+      const nodes = [
+        { id: 'claimcoda', color: 0x10b981, pos: [2.1, 0.9, 0.4] },
+        { id: 'fair-and-square', color: 0x06b6d4, pos: [-2.15, 0.75, 0.55] },
+        { id: 'bubba', color: 0xc084fc, pos: [1.4, -1.35, 1.05] },
+        { id: 'apex-os', color: 0x3b82f6, pos: [-1.55, -1.15, -0.95] },
+        { id: 'talonsync', color: 0xf59e0b, pos: [0.35, 1.85, -1.15] },
+        { id: 'performance-pro', color: 0x38bdf8, pos: [-0.25, -1.7, 1.15] }
+      ];
+      const nodeMeshes = {};
+      nodes.forEach((n) => {
+        const sat = new THREE.Mesh(
+          new THREE.OctahedronGeometry(0.24, 1),
+          new THREE.MeshStandardMaterial({
+            color: n.color,
+            emissive: n.color,
+            emissiveIntensity: 0.65,
+            roughness: 0.2,
+            metalness: 0.4
+          })
+        );
+        sat.position.set(...n.pos);
+        rig.add(sat);
+        nodeMeshes[n.id] = { mesh: sat, base: new THREE.Vector3(...n.pos) };
+
+        const lineGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, 0, 0), sat.position]);
+        const lineMat = new THREE.LineBasicMaterial({ color: n.color, transparent: true, opacity: 0.35 });
+        rig.add(new THREE.Line(lineGeo, lineMat));
+      });
+
+      // Starfield dust
+      const starPos = new Float32Array(180 * 3);
+      for (let i = 0; i < starPos.length; i++) starPos[i] = (Math.random() - 0.5) * 11;
+      const starGeo = new THREE.BufferGeometry();
+      starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+      const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0x93c5fd, size: 0.045, transparent: true, opacity: 0.55 }));
+      scene.add(stars);
+
+      let dragging = false, lx = 0, ly = 0, vx = 0.004, vy = 0.001, activeId = null;
+      wrap.addEventListener('pointerdown', (e) => {
+        dragging = true;
+        lx = e.clientX;
+        ly = e.clientY;
+      });
+      addEventListener('pointermove', (e) => {
+        if (!dragging) return;
+        const dx = e.clientX - lx;
+        const dy = e.clientY - ly;
+        lx = e.clientX;
+        ly = e.clientY;
+        rig.rotation.y += dx * 0.008;
+        rig.rotation.x += dy * 0.006;
+        vx = dx * 0.0012;
+        vy = dy * 0.001;
+      });
+      addEventListener('pointerup', () => { dragging = false; });
+
+      // Legend pill click highlights both 3D node & matching project card
+      document.querySelectorAll('#stageLegend .legend-pill').forEach((pill) => {
+        pill.addEventListener('click', () => {
+          const id = pill.dataset.target;
+          activeId = activeId === id ? null : id;
+          document.querySelectorAll('#stageLegend .legend-pill').forEach(p => p.classList.toggle('is-active', p.dataset.target === activeId));
+          document.querySelectorAll('.project-card').forEach(c => c.classList.toggle('is-highlighted', c.id === `card-${activeId}`));
+          if (activeId) {
+            document.getElementById(`card-${activeId}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+      });
+
+      function resize() {
+        const w = wrap.clientWidth;
+        const h = wrap.clientHeight;
+        if (!w || !h) return;
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        renderer.setSize(w, h, false);
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+      }
+      new ResizeObserver(resize).observe(wrap);
+      resize();
+
+      let visible = true;
+      new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(card);
+
+      const clock = new THREE.Clock();
+      function tick() {
+        requestAnimationFrame(tick);
+        if (!visible) return;
+        const t = clock.getElapsedTime();
+        if (!reduce) {
+          coreMesh.rotation.y = t * 0.28;
+          coreMesh.rotation.x = Math.sin(t * 0.4) * 0.2;
+          wireMesh.rotation.y = -t * 0.18;
+          rings[0].rotation.z = t * 0.15;
+          rings[1].rotation.z = -t * 0.12;
+          rings[2].rotation.x += 0.0015;
+          stars.rotation.y = t * 0.025;
+          if (!dragging) {
+            rig.rotation.y += vx;
+            rig.rotation.x = Math.max(-0.6, Math.min(0.6, rig.rotation.x + vy));
+            vx = vx * 0.96 + 0.0032 * 0.04;
+            vy *= 0.94;
+          }
+          Object.entries(nodeMeshes).forEach(([id, obj], i) => {
+            const targetScale = activeId === id ? 1.55 : 1.0;
+            obj.mesh.scale.lerp(new THREE.Vector3(targetScale, targetScale, targetScale), 0.12);
+            obj.mesh.rotation.y = t * 0.9 + i;
+            obj.mesh.position.y = obj.base.y + Math.sin(t * 1.4 + i) * 0.09;
+          });
+        }
+        renderer.render(scene, camera);
+      }
+      tick();
+    }
+
+    await loadProjects();
+    loadGitHubFeed();
+    init3DStage();
+  </script>
 </body>
 </html>
