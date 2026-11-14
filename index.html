@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Britto Thomas — Product &amp; AI Systems Portfolio</title>
+  <meta name="description" content="Portfolio of Britto Thomas: AI-native products built from business case, PRD, and architecture to full-stack web and desktop software." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="#top">Britto Thomas</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#stack">Capabilities</a>
+        <a href="#about">Background</a>
+        <a class="btn-outline" href="https://www.linkedin.com/in/britto-thomas-apr1986/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn-outline" href="https://github.com/iambritto1986" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Chicago · McKinsey · Uber Tech · AVMA · Singularity Insight</p>
+        <h1>Building AI-native products from business case to shipped software.</h1>
+        <p class="lead">
+          I'm Britto Thomas. Across healthcare appeals, career intelligence, desktop companions, enterprise operating models, and collaborative product planning, I design and build full-stack web and desktop applications end to end.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#projects">Explore What I'm Building</a>
+          <a class="btn-secondary" href="https://www.linkedin.com/in/britto-thomas-apr1986/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <a class="btn-secondary" href="https://github.com/iambritto1986" target="_blank" rel="noopener">GitHub Profile</a>
+        </div>
+        <div class="stats-row" aria-label="Portfolio summary">
+          <div class="stat-pill"><strong>6</strong> Shipped &amp; Active Products</div>
+          <div class="stat-pill"><strong>Web + Desktop</strong> React, Tauri 2 &amp; Electron</div>
+          <div class="stat-pill"><strong>Multimodal AI</strong> Gemini Live, 3D &amp; Voice</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>What I'm Building</h2>
+          <p>Public repositories are open for inspection on GitHub; private builds include full architecture summaries and are available for live walkthroughs on request.</p>
+        </div>
+
+        <div class="grid two-col">
+          <article class="card featured-card">
+            <div class="card-top">
+              <span class="badge badge-live">Public Repo</span>
+              <span class="meta">Healthcare · Consumer AI</span>
+            </div>
+            <h3>ClaimCoda</h3>
+            <p class="card-desc">
+              Consumer-first health insurance denial intelligence and appeal workspace. Transforms EOBs and Adverse Benefit Determination letters into structured, evidence-backed 3-part administrative appeal packets and Level 2 IRO dossiers.
+            </p>
+            <ul class="highlights">
+              <li>Real PDF denial ingestion (<code>pdfjs-dist</code>) with strict source-page provenance</li>
+              <li>Dual-pane source viewer &amp; statutory deadline rules (ERISA § 503 / ACA § 2719)</li>
+              <li>Real-time Voice Advocate powered by Gemini Multimodal Live API (<code>Zephyr</code>)</li>
+              <li>Includes Business Case, PRD, TRD, and multi-page PDF packet export</li>
+            </ul>
+            <div class="tags">
+              <span>React 19</span>
+              <span>TypeScript</span>
+              <span>Gemini Live API</span>
+              <span>Firebase</span>
+              <span>pdfjs-dist</span>
+              <span>jsPDF</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/iambritto1986/Claims_Coda" target="_blank" rel="noopener">View Repository &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card featured-card">
+            <div class="card-top">
+              <span class="badge badge-private">Private Repo · Flagship</span>
+              <span class="meta">Career AI · Web &amp; Electron</span>
+            </div>
+            <h3>Fair &amp; Square <span class="subtitle">(formerly Precision Match)</span></h3>
+            <p class="card-desc">
+              AI resume tailoring and live voice interview preparation platform (<code>fairandsquare.ai</code>). Tailors resumes to job descriptions with line-by-line user accept/reject control and watermark-free ATS-safe PDF/DOCX exports.
+            </p>
+            <ul class="highlights">
+              <li>Individual bullet-point review—AI never silently alters a user's resume</li>
+              <li>Live voice mock interviews grounded in the user's resume with AI coach <strong>Aadhya</strong></li>
+              <li>Multi-theme dashboard (Dark/Light × 4 accents), Application Tracker &amp; Stripe billing</li>
+              <li>Built under Singularity Insight with Web + Electron desktop packaging</li>
+            </ul>
+            <div class="tags">
+              <span>React 19</span>
+              <span>Express</span>
+              <span>Firebase</span>
+              <span>Gemini Live</span>
+              <span>Stripe</span>
+              <span>Electron</span>
+            </div>
+            <div class="card-links">
+              <span class="muted-note">Private codebase · Live demo on request</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-private">Private Repo</span>
+              <span class="meta">Desktop Companion · animasio.com</span>
+            </div>
+            <h3>Bubba <span class="subtitle">(Animasio)</span></h3>
+            <p class="card-desc">
+              A living Windows desktop companion (*Oliver*, *Aria*, and *Bubba*)—not a static timer widget. Walks across the screen, sits on the taskbar edge during focus sessions, and interacts via voice and break quizzes.
+            </p>
+            <ul class="highlights">
+              <li>Frameless, always-on-top Tauri 2 + Rust window with transparent VP9 video &amp; 3D GLB states</li>
+              <li>On-device wake-word detection (<code>Vosk</code>) with strict cost-guarded ElevenLabs voice sessions</li>
+              <li>Gemini-powered break quizzes and Postgres session persistence</li>
+            </ul>
+            <div class="tags">
+              <span>Tauri 2</span>
+              <span>Rust</span>
+              <span>React 19</span>
+              <span>Three.js</span>
+              <span>ElevenLabs</span>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="card-links">
+              <span class="muted-note">Private codebase · Showcase site in repo</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-private">Private Repo</span>
+              <span class="meta">Enterprise SaaS · 3D Graph</span>
+            </div>
+            <h3>Apex OS <span class="subtitle">(Organizational Intelligence)</span></h3>
+            <p class="card-desc">
+              AI-native enterprise operating intelligence platform to model organizational structure, govern reusable SOPs, map clickable processes, compose playbooks, and track KPIs, costs, and risks.
+            </p>
+            <ul class="highlights">
+              <li>Interactive 3D Neural Knowledge Graph (<code>Three.js</code> / <code>react-force-graph-3d</code>) driven by real relationships</li>
+              <li>Grounded tenant-isolated AI with human-in-the-loop approval for controlled actions</li>
+              <li>Multi-tenant Clerk SSO/SAML, Prisma ORM v6 &amp; PostgreSQL</li>
+            </ul>
+            <div class="tags">
+              <span>React 19</span>
+              <span>Three.js</span>
+              <span>Prisma</span>
+              <span>PostgreSQL</span>
+              <span>Clerk SSO</span>
+              <span>Gemini</span>
+            </div>
+            <div class="card-links">
+              <span class="muted-note">Private codebase · Walkthrough on request</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-private">Private Repo</span>
+              <span class="meta">Product Management · Real-Time</span>
+            </div>
+            <h3>TalonSync / Banana OS <span class="subtitle">(Product Planner)</span></h3>
+            <p class="card-desc">
+              Collaborative requirement and backlog prioritization board turning Excel/CSV spreadsheets into structured, real-time facilitated working sessions for Product Managers and teams.
+            </p>
+            <ul class="highlights">
+              <li>Priority (<code>P0–P3</code>), Disposition, Value vs. Effort 2×2 matrix &amp; blind Delphi planning poker</li>
+              <li>Zero-dependency gzip URL snapshot sharing &amp; live <code>Socket.IO</code> Knock-to-Join room entry</li>
+              <li>5-way export suite including an 8-sheet Excel workbook, CSV, HTML, and Markdown</li>
+            </ul>
+            <div class="tags">
+              <span>React 19</span>
+              <span>Socket.IO</span>
+              <span>Prisma</span>
+              <span>SheetJS</span>
+              <span>Clerk</span>
+              <span>Vitest</span>
+            </div>
+            <div class="card-links">
+              <span class="muted-note">Private codebase · Demo on request</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <span class="badge badge-live">Public Repo</span>
+              <span class="meta">People Ops · Analytics</span>
+            </div>
+            <h3>PerformancePro</h3>
+            <p class="card-desc">
+              Organizational performance management web app supporting team goals, continuous feedback, evaluation forms, calibration workflows, and role-based analytics dashboards.
+            </p>
+            <ul class="highlights">
+              <li>Role-aware navigation for Employees, Managers, and Admins</li>
+              <li>Interactive analytics charts (<code>Recharts</code>), MSAL auth &amp; PDF/Excel reporting</li>
+            </ul>
+            <div class="tags">
+              <span>React 18</span>
+              <span>TypeScript</span>
+              <span>Recharts</span>
+              <span>MSAL</span>
+              <span>Zod</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/iambritto1986/sb1-kvshuu" target="_blank" rel="noopener">View Repository &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>How I Build</h2>
+          <p>Every product combines structured product rigor with hands-on engineering.</p>
+        </div>
+        <div class="grid three-col">
+          <div class="card">
+            <h3>Product &amp; Governance</h3>
+            <p class="card-desc">
+              Business cases, PRDs, TRDs, statutory &amp; privacy boundaries, human-in-the-loop AI guardrails, and clear user economics.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Multimodal &amp; Voice AI</h3>
+            <p class="card-desc">
+              Google Gemini text &amp; Live WebSocket voice agents, ElevenLabs TTS, local wake-word detection, and grounded document provenance.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Full-Stack &amp; Desktop</h3>
+            <p class="card-desc">
+              React 19, TypeScript, Tailwind CSS, Three.js, Tauri 2 (Rust), Electron, Node/Express, Prisma, PostgreSQL, Firebase, and Clerk.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-box">
+        <div>
+          <h2>Background</h2>
+          <p>
+            Based in <strong>Chicago</strong>, with experience across <strong>McKinsey</strong>, <strong>Uber Tech</strong>, and <strong>AVMA</strong>. I focus on turning messy, high-friction workflows—insurance denials, job-search tailoring, backlog prioritization, organizational knowledge, and personal focus—into clean, trustworthy AI software.
+          </p>
+        </div>
+        <div class="contact-card">
+          <h3>Connect &amp; Walkthroughs</h3>
+          <p>Interested in a demo of Fair &amp; Square, Bubba, Apex OS, or TalonSync?</p>
+          <ul>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/britto-thomas-apr1986/" target="_blank" rel="noopener">britto-thomas-apr1986</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/iambritto1986" target="_blank" rel="noopener">github.com/iambritto1986</a></li>
+            <li><strong>Location:</strong> Chicago, IL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Britto Thomas · Singularity Insight · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+</body>
+</html>
