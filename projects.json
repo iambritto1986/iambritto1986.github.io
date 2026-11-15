@@ -94,13 +94,13 @@
     "accent": "#f59e0b",
     "accentRgb": "245, 158, 11",
     "categories": ["enterprise"],
-    "summary": "Collaborative backlog prioritization and live workshop platform converting Excel/CSV spreadsheets into real-time facilitated sessions with consensus voting, multiplayer 2D/3D whiteboards, direct share links, and executive exports.",
+    "summary": "Collaborative backlog prioritization and live workshop platform converting Excel/CSV spreadsheets into real-time facilitated sessions with consensus voting, multiplayer 2D/3D architecture whiteboards, holographic Air Draw, direct share links, and executive exports.",
     "highlights": [
       "Priority (P0–P3), Disposition, Value vs. Effort 2×2 matrix & blind Delphi planning poker",
-      "Multiplayer Excalidraw & Three.js 3D Spatial whiteboards with webcam Air Draw, magnetic 3D assemblies & direct ?board= links",
-      "Zero-dependency gzip URL sharing, live Socket.IO Knock-to-Join & 5-way workbook exports"
+      "Multiplayer Excalidraw & Three.js 3D Spatial whiteboards with architecture libraries, AI/Mermaid diagramming, holographic radial HUD & 2-hand 3D hologram controls",
+      "Zero-dependency gzip URL sharing, direct ?board= links, live Socket.IO Knock-to-Join & 5-way exports"
     ],
-    "stack": ["React 19", "Excalidraw", "Three.js", "MediaPipe", "WebSockets", "Socket.IO", "Prisma", "Clerk", "Vitest"],
+    "stack": ["React 19", "Excalidraw", "Three.js", "MediaPipe", "Mermaid", "WebSockets", "Socket.IO", "Prisma", "Clerk", "Vitest"],
     "url": null,
     "cta": "Private Codebase · Demo on Request"
   },
