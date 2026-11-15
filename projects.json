@@ -97,7 +97,7 @@
     "summary": "Collaborative backlog prioritization and live workshop platform converting Excel/CSV spreadsheets into real-time facilitated sessions with consensus voting, multiplayer Excalidraw whiteboards, and executive exports.",
     "highlights": [
       "Priority (P0–P3), Disposition, Value vs. Effort 2×2 matrix & blind Delphi planning poker",
-      "Multiplayer Excalidraw whiteboards with live cursors, sticky notes, image sharing & session sync",
+      "Multiplayer Excalidraw whiteboards with live cursors, sticky notes, webcam Air Draw & image sharing",
       "Zero-dependency gzip URL sharing, live Socket.IO Knock-to-Join & 5-way workbook exports"
     ],
     "stack": ["React 19", "Excalidraw", "WebSockets", "Socket.IO", "Prisma", "Clerk", "Vitest"],
