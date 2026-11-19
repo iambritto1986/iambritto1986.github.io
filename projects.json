@@ -135,13 +135,13 @@
     "accent": "#355E4E",
     "accentRgb": "53, 94, 78",
     "categories": ["ai"],
-    "summary": "Cross-platform mobile and web biblical companion featuring an animated floating daily verse, translucent Liquid Glass navigation, spoken blessings, mood-aware biblical conversation, and a Social (Beta) encouragement circle.",
+    "summary": "Cross-platform mobile and web biblical companion featuring an animated floating daily verse, translucent Liquid Glass navigation, an animated Golden Cross voice avatar, live Bible chapter lookup, and Social (Beta) with prayer events and Pastor church teams.",
     "highlights": [
-      "Instant floating World English Bible (WEB) daily verse over animated ambient light orbs with expo-speech audio blessings",
-      "Translucent Liquid Glass floating tab bar (Blessing, Talk, Social BETA, Plans) with fluid spring-animated screen transitions",
-      "Social (Beta) name-and-email fellowship feed, offline + optional Gemini 2.5 Flash conversation, and $1/mo & $12/mo tiers"
+      "ChatGPT-style animated Golden Cross voice avatar powered by ElevenLabs neural TTS, warm device fallback & optional Gemini 2.5 Flash",
+      "Instant floating daily verse with scheduled phone notifications (muteable), plus live Bible chapter/verse search via bible-api.com",
+      "Social (Beta) blessings & verse sharing feed, prayer meeting scheduling/RSVPs, and Pastor church member team broadcasts"
     ],
-    "stack": ["React Native", "Expo", "TypeScript", "expo-blur", "expo-speech", "AsyncStorage", "Gemini API"],
+    "stack": ["React Native", "Expo", "TypeScript", "ElevenLabs", "expo-notifications", "expo-blur", "Gemini API"],
     "url": null,
     "cta": "Private Codebase · Demo on Request"
   }
