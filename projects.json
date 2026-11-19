@@ -123,5 +123,26 @@
     "stack": ["React 18", "TypeScript", "Recharts", "MSAL", "Zod"],
     "url": "https://github.com/iambritto1986/sb1-kvshuu",
     "cta": "Explore Repository"
+  },
+  {
+    "id": "stillwaters",
+    "index": "07",
+    "title": "StillWaters",
+    "subtitle": "Daily Biblical Companion · iOS, Android & Web",
+    "visibility": "private",
+    "badge": "Private · Mobile & Web",
+    "domain": "Consumer Mobile · Faith & Wellness",
+    "accent": "#355E4E",
+    "accentRgb": "53, 94, 78",
+    "categories": ["ai"],
+    "summary": "Cross-platform mobile and web biblical companion offering daily comforting scripture in plain English, spoken audio blessings, and empathetic mood-aware conversation for users seeking calm and direction.",
+    "highlights": [
+      "Mood-based daily World English Bible (WEB) verses, plain-language reflections & spoken audio blessings via expo-speech",
+      "Empathetic conversational companion with local offline guidance and optional Gemini 2.5 Flash live AI mode",
+      "Tiered membership model ($1/mo Daily Verse & $12/mo Companion) with persistent AsyncStorage bookmarks & check-in history"
+    ],
+    "stack": ["React Native", "Expo", "TypeScript", "expo-speech", "AsyncStorage", "Gemini API"],
+    "url": null,
+    "cta": "Private Codebase · Demo on Request"
   }
 ]
