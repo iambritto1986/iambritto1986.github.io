@@ -135,13 +135,13 @@
     "accent": "#355E4E",
     "accentRgb": "53, 94, 78",
     "categories": ["ai"],
-    "summary": "Cross-platform mobile and web biblical companion offering daily comforting scripture in plain English, spoken audio blessings, and empathetic mood-aware conversation for users seeking calm and direction.",
+    "summary": "Cross-platform mobile and web biblical companion featuring an animated floating daily verse, translucent Liquid Glass navigation, spoken blessings, mood-aware biblical conversation, and a Social (Beta) encouragement circle.",
     "highlights": [
-      "Mood-based daily World English Bible (WEB) verses, plain-language reflections & spoken audio blessings via expo-speech",
-      "Empathetic conversational companion with local offline guidance and optional Gemini 2.5 Flash live AI mode",
-      "Tiered membership model ($1/mo Daily Verse & $12/mo Companion) with persistent AsyncStorage bookmarks & check-in history"
+      "Instant floating World English Bible (WEB) daily verse over animated ambient light orbs with expo-speech audio blessings",
+      "Translucent Liquid Glass floating tab bar (Blessing, Talk, Social BETA, Plans) with fluid spring-animated screen transitions",
+      "Social (Beta) name-and-email fellowship feed, offline + optional Gemini 2.5 Flash conversation, and $1/mo & $12/mo tiers"
     ],
-    "stack": ["React Native", "Expo", "TypeScript", "expo-speech", "AsyncStorage", "Gemini API"],
+    "stack": ["React Native", "Expo", "TypeScript", "expo-blur", "expo-speech", "AsyncStorage", "Gemini API"],
     "url": null,
     "cta": "Private Codebase · Demo on Request"
   }
