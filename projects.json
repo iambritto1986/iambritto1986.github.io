@@ -135,11 +135,11 @@
     "accent": "#355E4E",
     "accentRgb": "53, 94, 78",
     "categories": ["ai"],
-    "summary": "Cross-platform mobile and web biblical companion combining free Open Bible access & Facebook-style Social/Groups with a 7-day trial into $1/mo Daily Blessings and a $12/mo Divine Golden Cross AI Voice Companion.",
+    "summary": "Cross-platform mobile and web biblical companion combining free Open Bible access & Facebook-style Social and Christian Group Profiles with a 7-day trial into $1/mo Daily Blessings and a $12/mo Divine Golden Cross AI Voice Companion.",
     "highlights": [
-      "Free Open Bible lookup (tap-verse audio + voice presets) and Facebook-style Social (Beta) with free Group invites, live comments & Cover/Avatar profiles",
-      "Hero daily floating blessing card (7-day trial -> $1/mo) and radiant Divine Golden Cross voice avatar (MediaRecorder/expo-av, Gemini audio & ElevenLabs)",
-      "Viral growth loop: searchable member directory with plan status badges, free non-paywalled Group invites & gentle upgrade nudges"
+      "Free Open Bible lookup (tap-verse audio + voice presets) and Facebook-style Social (Beta) with Christian Group Profile pages (cover, avatar, discussion, members & events)",
+      "Hero daily floating blessing card and radiant Divine Golden Cross voice avatar with natural conversational phrasing, ElevenLabs TTS & browser natural-voice selection",
+      "Viral growth loop: searchable member directory with plan badges, free Group invites & gentle 7-day trial upgrade prompts"
     ],
     "stack": ["React Native", "Expo", "TypeScript", "ElevenLabs", "expo-notifications", "expo-blur", "Gemini API"],
     "url": null,
