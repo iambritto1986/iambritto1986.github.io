@@ -138,7 +138,7 @@
     "summary": "Cross-platform mobile and web biblical companion combining free Open Bible access & Facebook-style Social and Christian Group Profiles with a 7-day trial into $1/mo Daily Blessings and a $12/mo Divine Golden Cross AI Voice Companion.",
     "highlights": [
       "Free Open Bible lookup (tap-verse audio + voice presets) and Facebook-style Social (Beta) with unified Search, Notification Bell & live alert bar, Friends & Direct Messaging, and Christian Group Profile pages",
-      "Hero daily floating blessing card and radiant Divine Golden Cross voice avatar with natural conversational phrasing, ElevenLabs TTS & browser natural-voice selection",
+      "3D floating Living Word hero Blessing card, gleaming 3D Golden Talk button, and Samson—the Golden Cross AI companion with personalized prayer request memory and on-screen voice presets",
       "Viral growth loop: searchable member directory with plan badges, free Group/Friend invites & gentle 7-day trial upgrade prompts"
     ],
     "stack": ["React Native", "Expo SDK 58", "TypeScript", "expo-audio", "expo-image-picker", "expo-notifications", "ElevenLabs", "Gemini API"],
