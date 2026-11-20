@@ -137,11 +137,11 @@
     "categories": ["ai"],
     "summary": "Cross-platform mobile and web biblical companion combining free Open Bible access & Facebook-style Social and Christian Group Profiles with a 7-day trial into $1/mo Daily Blessings and a $12/mo Divine Golden Cross AI Voice Companion.",
     "highlights": [
-      "Free Open Bible lookup (tap-verse audio), Facebook-style Social (Beta) with unified Search, Notification Bell, Friends & Direct Messaging, Christian Group Profile pages, and an interactive My Network SVG atlas connecting believers across states, regions & churches",
+      "Free Open Bible lookup (tap-verse audio), Facebook-style Social (Beta) with unified Search, Notification Bell, Friends & Direct Messaging, Christian Group Profile pages, and a Three.js 3D Community Atlas connecting believers & churches across states and regions",
       "3D floating Living Word hero Blessing and Samson—the moving Golden Cross AI companion—featuring decluttered Talk space, suggestive prayer prompts, Voice Settings modal, and personalized prayer memory",
-      "Bespoke Sanctuary Craft UI with editorial Playfair Display & Plus Jakarta Sans typography, diffused aurora backdrop, pan/zoom graph path-tracing, native expo-haptics, and gentle 7-day trial loop"
+      "Bespoke Sanctuary Craft UI with editorial Playfair Display & Plus Jakarta Sans typography, zoom-revealed regional map detail, interconnected Church/State Constellation Web, native expo-haptics, and gentle 7-day trial loop"
     ],
-    "stack": ["React Native", "Expo SDK 58", "TypeScript", "react-native-svg", "expo-haptics", "expo-audio", "expo-notifications", "ElevenLabs", "Gemini API"],
+    "stack": ["React Native", "Expo SDK 58", "TypeScript", "Three.js", "us-atlas", "react-native-svg", "expo-haptics", "expo-audio", "ElevenLabs", "Gemini API"],
     "url": null,
     "cta": "Private Codebase · Demo on Request"
   }
