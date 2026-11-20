@@ -141,7 +141,7 @@
       "Hero daily floating blessing card and radiant Divine Golden Cross voice avatar with natural conversational phrasing, ElevenLabs TTS & browser natural-voice selection",
       "Viral growth loop: searchable member directory with plan badges, free Group invites & gentle 7-day trial upgrade prompts"
     ],
-    "stack": ["React Native", "Expo", "TypeScript", "ElevenLabs", "expo-notifications", "expo-blur", "Gemini API"],
+    "stack": ["React Native", "Expo SDK 58", "TypeScript", "expo-audio", "expo-image-picker", "expo-notifications", "ElevenLabs", "Gemini API"],
     "url": null,
     "cta": "Private Codebase · Demo on Request"
   }
